@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ reseña }}
   </div>
 </template>
 

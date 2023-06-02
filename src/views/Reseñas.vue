@@ -17,7 +17,7 @@
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">{{ reseña.product.name }}</h5>
-            <p class="card-text">{{reseña.product.description}}</p>
+            <p class="card-text">{{reseña.review}}</p>
           </div>
         </div>
       </div>
@@ -38,10 +38,12 @@ export default {
         return {
             reseñas: [],
             usuario: null,
+            usuarioId: "",
         };
     },
     async mounted() {
-        const result = await obtenerResenas("647178286edc199bff73e81f");
+        this.usuarioId = this.$route.params.userid;
+        const result = await obtenerResenas(this.usuarioId);
         this.usuario = result.user;
         this.reseñas = result.reviews;
         console.log(result)
