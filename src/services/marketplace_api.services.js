@@ -10,4 +10,16 @@ function obtenerResenas(userid) {
     });
 }
 
-export { obtenerResenas };
+function listarProductos(){
+    return axios.get(`${BASE_URL}/products`).then((result)=>{
+        return result.data
+    })
+}
+
+function detalleProducto(id){
+    return axios.get(`${BASE_URL}/products/${id}/reviews`).then((result)=>{
+        return result.data
+    })
+}
+
+export {listarProductos , detalleProducto, obtenerResenas}
