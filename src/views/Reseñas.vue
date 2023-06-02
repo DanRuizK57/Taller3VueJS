@@ -1,6 +1,4 @@
 <template>
-  <h1>Reseñas</h1>
-  <reseña-item></reseña-item>
   <div v-if="usuario">
     <img :src="usuario.photo" alt="Forto de usuario" id="fotoPerfil">
     <h2>{{usuario.name}}</h2>
@@ -27,13 +25,9 @@
 
 <script>
 import { obtenerResenas } from "../services/marketplace_api.services";
-import ReseñaItem from '../components/ReseñaItem.vue'
 
 export default {
     name: "ReseñasPage",
-    components: {
-        ReseñaItem,
-    },
     data() {
         return {
             reseñas: [],
