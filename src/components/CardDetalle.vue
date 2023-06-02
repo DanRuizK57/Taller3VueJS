@@ -44,16 +44,28 @@
             </div>
         </div>
     </div>
+    <div v-for="(item, index) in reseñas" :key="index">
+        <ReseñaItem 
+        :img="item.user.photo"
+        :name="item.user.name"
+        :descripcion="item.review"
+        />
+        
+    </div>
+
 </template>
 <script setup>
 import { defineProps, ref } from "vue";
+import ReseñaItem from '@/components/ReseñaItem.vue'
 
 const props = defineProps({
     img: [],
     producto: Object,
     usuario: Object,
+    review: []
 });
 
+const reseñas = ref(props.review) 
 const imagen = ref(props.img);
 const producto = ref(props.producto);
 const usuario = ref(props.usuario);

@@ -5,6 +5,7 @@
             :img="producto.product.images"
             :producto="producto.product"
             :usuario="producto.product.user"
+            :review="producto.reviews"
             ></CardDetalle>
         </div>
         <p v-else>cargando</p>
