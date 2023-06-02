@@ -9,4 +9,10 @@ function listarProductos(){
     })
 }
 
-export {listarProductos}
+function detalleProducto(id){
+    return axios.get(`${BASE_URL}/products/${id}/reviews`).then((result)=>{
+        return result.data
+    })
+}
+
+export {listarProductos , detalleProducto}
