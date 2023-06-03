@@ -1,17 +1,17 @@
 <template>
   <div v-if="usuario">
-    <img :src="usuario.photo" alt="Forto de usuario" id="fotoPerfil">
-    <h2>{{ usuario.name }}</h2>
-    <h4>{{ usuario.city }}</h4>
-    <p>{{ usuario.bio }}</p>
-    <h3>Reseñas creadas por {{ usuario.name }} ({{ reseñas.length}})</h3>
+    <img :src="usuario.photo" alt="Forto de usuario" class="rounded-circle" id="fotoPerfil">
+    <h2 class="nombreUsuario">{{ usuario.name }}</h2>
+    <h4 class="ciudadUsuario">{{ usuario.city }}</h4>
+    <p class="bioUsuario">{{ usuario.bio }}</p>
+    <h1>Reseñas creadas por {{ usuario.name }} ({{ reseñas.length}})</h1>
   </div>
   <div v-for="(reseña, index) in reseñas" :key="index" class="reseñas">
     <ReseñaItem 
     :img="reseña.product.images[0]"
     :name="reseña.product.name"
     :descripcion="reseña.review">
-      </ReseñaItem>
+    </ReseñaItem>
     
   </div>
 </template>
@@ -47,14 +47,21 @@ export default {
 #fotoPerfil {
     height: 300px;
     widows: 300px;
-    border: 1px solid black;
-    border-radius: 1000px;
     margin-top: 5%;
     margin-bottom: 2%;
 }
+
 .reseñas {
     margin-top: 5%;
     display: flex;
     justify-content: center;
+}
+
+.bioUsuario{
+  margin-top: 2%;
+  margin-bottom: 5%;
+  font-size: 20px;
+  font-weight: bold;
+  color: gray;
 }
 </style>
