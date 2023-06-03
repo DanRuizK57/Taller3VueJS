@@ -11,7 +11,7 @@
                             <h5 class="card-title">{{ item.name }}</h5>
                             <p class="card-text">{{ item.description }}</p>
                             <p class="card-text">{{ item.user.city }}</p>
-                            <p class="card-text">agregado el {{ item.createdAt }}</p>
+                            <p class="card-text">Agregado el {{ item.createdAt }}</p>
                             <p class="card-text">
                                 <small class="text-body-secondary">${{ item.price }}</small>
                             </p>
@@ -20,7 +20,7 @@
                                 params:{
                                     id:item._id
                                 }
-                            }">detalle</router-link>
+                            }">Detalle</router-link>
                         </div>
                     </div>
                 </div>

@@ -2,7 +2,7 @@
   <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Shopi</a>
+          <a class="navbar-brand shopi">Shopi</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -18,14 +18,9 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                     <router-link to="/listaProductos">
-                      <a class="nav-link active titulo" aria-current="page">Productos</a>
+                      <a class="nav-link titulo" aria-current="page">Productos</a>
                     </router-link>
                   </li>
-                <li class="nav-item">
-                  <router-link to="/resenas">
-                    <a class="nav-link active titulo" aria-current="page">Reseñas</a>
-                  </router-link>
-                </li>
             </ul>
           </div>
         </div>
@@ -39,7 +34,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
@@ -52,7 +46,10 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
+a{
+  color: white;
+}
+a:hover, .shopi {
   color: #42b983;
 }
 </style>

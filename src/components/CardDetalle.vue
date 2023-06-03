@@ -29,7 +29,7 @@
 
                 <p class="card-text">{{ producto.name }}</p>
                 <p class="card-text">{{ producto.description }}</p>
-                <p class="card-text">$ {{ producto.price }}</p>
+                <p class="card-text">${{ producto.price }}</p>
                 <p class="card-text">{{ producto.createdAt }}</p>
             </div>
         </div>
@@ -39,7 +39,12 @@
                 <div class="card-body">
                     <p class="card-text">{{ usuario.name }}</p>
                     <p class="card-text">{{ usuario.city }}</p>
-                    <router-link class="btn btn-primary mt-5" :to="{}">ver perfil</router-link>
+                    <router-link class="btn btn-primary mt-5" :to="{
+                                name:'resenas',
+                                params:{
+                                    userid: usuario._id
+                                }
+                            }">Perfil</router-link>
                 </div>
             </div>
         </div>
