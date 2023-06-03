@@ -8,12 +8,12 @@ import DetalleProductoView from '@/views/DetalleProductoView.vue'
 
 const routes = [
   {
-    path: '/listaProductos',
+    path: '/',
     name: 'listado',
     component: ListadoProductoView
   },
   {
-    path: '/detalle:id',
+    path: '/detalle/:id',
     name:'detalle',
     component: DetalleProductoView
   },

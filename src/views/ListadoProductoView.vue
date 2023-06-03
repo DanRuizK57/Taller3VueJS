@@ -8,4 +8,8 @@
 import ListaProductos from '@/components/ListaProductos.vue';
 </script>
 
-<style></style>
+<style>
+h1 {
+    margin-top: 2%;
+}
+</style>
